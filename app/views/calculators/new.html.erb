@@ -1,0 +1,12 @@
+<%= form_with model: Calculation.new, url: calculations_path, local: true do |form| %>
+  <% if @error %>
+    <p><%= @error %></p>
+  <% end %>
+  <div>
+    <%= form.label :input, "Enter numbers" %>
+    <%= form.text_field :input %>
+  </div>
+  <div>
+    <%= form.submit "Calculate" %>
+  </div>
+<% end %>
